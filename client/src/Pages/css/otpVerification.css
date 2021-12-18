@@ -1,0 +1,104 @@
+.otpverification {
+  overflow: hidden;
+  padding: 5%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: #f0f9ff;
+}
+
+.otpverification .otpinputbox {
+  width: 50%;
+  margin: 0 auto;
+  padding: 5% 5%;
+  background: #282d32;
+  border: 5px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    to right,
+    rgba(209, 107, 165, 0.8),
+    rgba(134, 168, 231, 0.8)
+  );
+  mask: inherit;
+  -webkit-mask: linear-gradient(
+    to right,
+    rgba(209, 107, 165, 0.8),
+    rgba(134, 168, 231, 0.8)
+  );
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+.otpverification .otpinputbox .head,
+.otpverification .otpinputbox .explain,
+.otpverification .otpinputbox .input,
+.otpverification .otpinputbox .submitbutton {
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.otpverification .otpinputbox .head h1 {
+  margin: 0;
+}
+
+.otpverification .otpinputbox .explain span {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.otpverification .otpinputbox .input {
+  height: 0.4in;
+  margin-top: 5%;
+}
+
+.otpverification .otpinputbox .input input {
+  width: 100%;
+  margin: 0;
+  border: none;
+  outline: none;
+  padding: 0 2%;
+  box-sizing: border-box;
+  height: 100%;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.otpverification .otpinputbox .input input::-webkit-outer-spin-button,
+.otpverification .otpinputbox .input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.otpverification .otpinputbox .input input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.otpverification .otpinputbox .submitbutton {
+  height: 0.4in;
+  margin-top: 5%;
+}
+
+.otpverification .otpinputbox .submitbutton button {
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0 2%;
+  outline: none;
+  height: 100%;
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  background: linear-gradient(
+    to right,
+    rgba(209, 107, 165, 0.8),
+    rgba(134, 168, 231, 0.8)
+  );
+}
+
+.otpverification .otpinputbox .submitbutton button:hover {
+  border: 1.5px solid black;
+}

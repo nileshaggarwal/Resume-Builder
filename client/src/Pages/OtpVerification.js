@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import "./css/otpVerification.css";
 import { otpVerify } from "./helper/authhelper";
-import { Redirect } from "react-router";
+import { Redirect } from "react-router-dom";
 
 const OtpVerification = ({ match }) => {
   const [otp, setOtp] = useState();
@@ -84,7 +84,6 @@ const OtpVerification = ({ match }) => {
 
   return (
     <div>
-      {Header()}
       {OtpVerificationPage()}
       {performRedirect()}
       <ToastContainer
@@ -98,7 +97,6 @@ const OtpVerification = ({ match }) => {
         draggable
         pauseOnHover
       />
-      {Footer()}
     </div>
   );
 };

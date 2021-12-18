@@ -3,7 +3,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./css/signin.css";
 import { signin, authenticate, isAutheticated } from "./helper/authhelper";
-import { Redirect } from "react-router";
+import { Redirect } from "react-router-dom";
 
 const Signin = () => {
   const [values, setValues] = useState({
@@ -103,7 +103,6 @@ const Signin = () => {
 
   return (
     <div>
-      {Header()}
       <div className="signinpage">{SigninPage()}</div>
       {loadingMessage()}
       <ToastContainer
@@ -118,7 +117,6 @@ const Signin = () => {
         pauseOnHover
       />
       {performRedirect()}
-      {Footer()}
     </div>
   );
 };

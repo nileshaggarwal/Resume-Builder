@@ -4,7 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "./css/signup.css";
 
 import { signup } from "./helper/authhelper";
-import { Redirect } from "react-router";
+import { Redirect } from "react-router-dom";
 
 const Signup = () => {
   const [values, setValues] = useState({
@@ -98,7 +98,6 @@ const Signup = () => {
 
   return (
     <div>
-      {Header()}
       {SignupPage()}
       <ToastContainer
         position="top-right"
@@ -112,7 +111,6 @@ const Signup = () => {
         pauseOnHover
       />
       {performRedirect()}
-      {Footer()}
     </div>
   );
 };

@@ -9,19 +9,14 @@ const _ = require("lodash");
 const otpGenerator = require("otp-generator");
 
 exports.signup = (req, res) => {
-  if (!errors.isEmpty()) {
-    return res.status(422).json({
-      error: errors.array()[0].msg,
-    });
-  }
   console.log(req.body);
   const { email } = req.body;
   var token = otpGenerator.generate(6, {
-    upperCase: false,
+    upperCaseAlphabets: false,
     specialChars: false,
-    alphabets: false,
+    lowerCaseAlphabets: false,
   });
-
+  console.log(token);
   token = Number(token);
 
   req.body.confirmationCode = token;
@@ -96,12 +91,6 @@ exports.verifyUser = (req, res) => {
 ///
 exports.signin = (req, res) => {
   const { email, password } = req.body;
-
-  if (!errors.isEmpty()) {
-    return res.status(422).json({
-      error: errors.array()[0].msg,
-    });
-  }
 
   User.findOne({ email }, (err, user) => {
     if (err || !user) {
